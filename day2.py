@@ -39,3 +39,16 @@ else:
 # 80-100 AA
 # not ortalamasını ve not harfini kullanıcıya gösterecek programı kodlayınız.
 
+for i in range(6):
+    print(i)
+
+students = ["Nilüfer","Özlem","Berk","Zakir"]
+for i in students:
+    print(i)
+
+
+i=0
+while i < 10:
+    print(i)
+    i+=1
+    
