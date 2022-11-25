@@ -1,0 +1,59 @@
+PostgreSQL çok fazla veri türünü destekler.İlgili türler:
+
+Sayısal Türler: İki baytlık, dört baytlık ve sekiz baytlık tamsayılardan, dört baytlık ve sekiz baytlık kayan noktalı sayılardan ve seçilebilir hassasiyetli ondalık sayılardan oluşur.
+Belli başlı örnekler:
+
+İsim		Depolama Boyutu		Aralık
+smallint	2 byte			-32768 to +32767
+integer		4 byte			-2147483648 to +2147483647
+decimal		variable 		up to 131072 digits before the decimal point;
+					up to 16383 digits after the decimal point
+serial		4 byte			1 to 2147483647
+
+Para Tipi: Para türleri için özel olarak 'money' tip veri türü belirlenmiştir.
+
+İsim		Depolama Boyutu		Aralık
+money		8 bytes			-92233720368547758.08 to +92233720368547758.07
+
+
+Karakter Tipleri:
+
+İsim			
+character varying(n) 
+varchar(n)
+character(n) 
+char(n)	
+text
+
+Binary Veri Tipi:
+
+İsim		Depolama Boyutu
+bytea		1 or 4 bytes plus the actual binary string
+
+Tarih/Saat Tipleri:
+
+İsim				Depolama Boyutu		Aralık
+date				4 bytes			4713 BC - 5874897 AD
+TIMESTAMPTZ			8 bytes			4713 BC	- 294276 AD
+time [ (p)] with time zone	12 bytes		00:00:00+1459 -	24:00:00-1459
+interval [fields ] [(p) ]	12 bytes		-178000000 years - 178000000 years
+time [ (p)] without time zone	8 bytes	 		00:00:00 - 24:00:00
+
+Boolean Tipi:
+
+İsim		Depolama Boyutu		Aralık
+boolean		1 byte			true or false
+
+Network Adres Tipi:
+
+İsim		Depolama Boyutu		Açıklama
+cidr		7 or 19 bytes		IPv4 and IPv6 networks
+inet		7 or 19 bytes		IPv4 and IPv6 hosts and networks
+macaddr		6 bytes			MAC addresses
+
+XML Tipi: XML veri türü, XML verilerini depolamak için kullanılabilir
+
+JSON Tipi: json veri türü, JSON verilerini depolamak için kullanılabilir.
+
+Dizi Tipi: PostgreSQL'de bir tablonun bir sütununu değişken uzunluklu çok boyutlu bir dizi olarak tanımlayabiliriz.
+
