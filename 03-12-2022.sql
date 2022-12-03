@@ -22,7 +22,7 @@ group by cu.name, cu.surname
 having count(ci.name) >= 2
 
 -- Eklenmiş ancak hiç bir siparişte kullanılmamış adresleri listeleyiniz.
-select ad.title, st.name, d.name, ci.name, co.name from order_details od
+select ad.title "Adres İsmi", st.name "Cadde", d.name"Mahalle", ci.name"Şehir", co.name"Ülke" from order_details od
 left join orders o on od.order_id = o.id
 left join customers cu on o.id = cu.id
 left join addresses ad on cu.id = ad.customer_id
